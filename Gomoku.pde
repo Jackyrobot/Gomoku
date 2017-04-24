@@ -11,43 +11,40 @@ void setup()
 }
 int piece(int y, int x) 
 {   
-    return board[y][x];
+  if(y < 0 || x < 0)
+    return 0;
+  return board[y][x];
 }
 int getWinner() //determine winner if 5 in a row vert, horizontal, or diagonal
 { 
   //check row 
   for(int y = 0; y < ySize; y++)
     for(int x = 0; x < xSize; x++)
-      if (piece(y,x) !=0 && piece(y,x) == piece(y,x+1) 
-                     && piece(y,x) == piece(y,x+2)
-                     && piece(y,x) == piece(y,x+3)
-                     && piece(y,x) == piece(y,x+4))
+      if (piece(y,x) !=0 && piece(y,x) == piece(y,x+1) && piece(y,x) == piece(y,x+2) && piece(y,x) == piece(y,x+3)&& piece(y,x) == piece(y,x+4))
          return piece(y,x);  
 
   // check column
   for(int y = 0; y < ySize; y++)
     for(int x = 0; x < xSize; x++)
-      if(piece(y,x) !=0 && piece(y,x)==piece(y+1,x) 
-                    && piece(y,x)==piece(y+2,x)
-                    &&piece(y,x)==piece(y+3,x)
-                    && piece(y,x)==piece(y+4,x))
+      if(piece(y,x) !=0 && piece(y,x)==piece(y+1,x) && piece(y,x)==piece(y+2,x)&&piece(y,x)==piece(y+3,x) && piece(y,x)==piece(y+4,x))
          return piece(y,x); 
     
   // check diagonal
   for(int y = 0; y < ySize; y++)
     for(int x = 0; x < xSize; x++) 
       for (int d = -1; d <= 1; d+=2)
-         if(piece(y,x) !=0  && piece(y,x) == piece(y+1*d,x+1) 
-                      && piece(y,x) == piece(y+2*d,x+2) 
-                      && piece(y,x) == piece(y+3*d,x+3) 
-                      && piece(y,x) == piece(y+4*d,x+4))
+         if(piece(y,x) !=0  && piece(y,x) == piece(y+1*d,x+1) && piece(y,x) == piece(y+2*d,x+2) && piece(y,x) == piece(y+3*d,x+3) && piece(y,x) == piece(y+4*d,x+4))
           return piece(y,x);   
     
   //check tie
   for(int y = 0; y < ySize; y++)
+  {
     for(int x=0; x < xSize; x++)
+    {
       if (piece(y,x)==0) 
         return 0; //winner 
+    }
+  }
       return -1; // tie
 }
 void mousePressed()
@@ -65,7 +62,7 @@ void mousePressed()
 }
 void draw() 
 {
-  if(getWinner() ==0){
+  if(getWinner() == 0){
     for(int j = 0; j < ySize; j++) 
        for(int i = 0; i < xSize; i++){  
          fill(182, 155, 76); //wood color
