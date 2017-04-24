@@ -49,8 +49,8 @@ int getWinner() //determine winner if 5 in a row vert, horizontal, or diagonal
 }
 void mousePressed()
 {
-  int x = mouseX/gridSize;
-  int y = mouseY/gridSize; 
+  int x = (int)mouseX/gridSize;
+  int y = (int)mouseY/gridSize; 
   if(y >= 0)
   {
     board[y][x] = player; 
