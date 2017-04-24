@@ -108,4 +108,4 @@ void draw()
           board [y][x] = 0; 
    }
  }
-}# Gomoku
+}
