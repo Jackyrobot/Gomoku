@@ -2,7 +2,7 @@
 (also known as GoBang or 5-in-a-row
 by Jacky Liu
 
-![alt text](https://i.imgur.com/LrecoCt.png)
+![alt text](https://imgur.com/a/KpLs4w8)
 
 How to run: 
 1. Download Processing Java at https://processing.org/download
