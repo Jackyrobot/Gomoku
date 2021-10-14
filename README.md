@@ -10,6 +10,6 @@ How to run:
 3. Open pde file and run
 
 How to Play:
-Click tile to place piece. It will automatically alternate between the two colors so take turns placing. 
-Game ends once one player has 5 pieces of their corresponding color placed in a straight line.
-Press space to restart after game ends. 
+- Click tile to place piece. It will automatically alternate between the two colors so take turns placing. 
+- Game ends once one player has 5 pieces of their corresponding color placed in a straight line.
+- Press space to restart after game ends. 
